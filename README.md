@@ -1,58 +1,84 @@
-# Getting Started
+# SciCat Live Docker Compose Setup 🐳✨  
 
-## Requirements
+This repository provides a **Docker Compose setup** for deploying the **SciCat data catalog** with a frontend in **Angular** and a backend in **LoopBack**. It includes **mock data** for tutorials, demos, and hackathons.
 
-- git
-- Docker
-- docker-compose
-- Make
-## 0. If you are behind a proxy
+---
 
-You can add 
-```
-ENV http_proxy "http://192.your.proxy.ip"
-ENV https_proxy $http_proxy
-```
+## Features ✨  
 
-## 1. Download & Build
+- **Frontend and Backend Deployment**: Angular-based frontend and LoopBack backend.  
+- **Mock Data**: Preloaded for testing, tutorials, and hackathons.  
+- **Dockerized**: Simplifies deployment with Docker Compose.  
 
-Build by entering the directory and executing
+---
 
-    make
+## Prerequisites 🛠️  
 
-This will:
+- Docker installed on your system.  
+- Docker Compose installed.  
 
-1. Fetch the latest *master* revision of Catamel and Catanie from GitHub, placing them in `catanie/catanie` and `catamel/catamel` respectively.
-2. Build Docker images for Catanie, Catamel, MongoDB and a small helper to create a text index in the database.
+---
 
-## 2. Run & Develop
+## Installation  
 
-Start developing by executing
+1. Clone the repository:  
+   git clone https://github.com/your-username/scicat-live-docker.git  
+   cd scicat-live-docker  
 
-    make run-hot
+2. Start the services:  
+   docker-compose up  
 
-This will mount the local source code folder (`src`) of Catanie, enabling hot reloading of code changes. Note that changes to anything outside this folder, e.g. `node_modules`, requires a rebuild.
+3. Access the app in your browser:  
+   Frontend: http://localhost:4200  
+   Backend API: http://localhost:3000/api  
 
-## 3. Add Mock Data
+---
 
-Run
+## Usage 🔧  
 
-    make data
+1. Modify `docker-compose.yml` to adjust service configurations if needed.  
+2. Use the mock data to explore SciCat's features and workflows.  
 
-to create and insert mock data (Datasets, Proposals etc.) This is done over the Catamel API, so the application needs to be running.
+---
 
-# Other tasks
+## File Structure 📂  
 
-Run without hot reloading, i.e. as static Docker images:
+- `docker-compose.yml`: Docker Compose configuration.  
+- `mock-data/`: Preloaded mock data for testing.  
+- `README.md`: Documentation for the repository.  
 
-    make run
+---
 
-Other:
+## Example Commands  
 
-    make stop
-    make clean
+- Start the services:  
+  docker-compose up  
 
-# Todo
+- Stop the services:  
+  docker-compose down  
 
-- Make catamel support hot reloading
-- Support testing in frontend
+---
+
+## Contributing 🤝  
+
+1. Fork the repository.  
+2. Create a new branch:  
+   git checkout -b feature/your-feature  
+
+3. Commit your changes:  
+   git commit -m "Add your feature"  
+
+4. Push the branch:  
+   git push origin feature/your-feature  
+
+5. Open a pull request.  
+
+---
+
+## License 📝  
+
+This project is licensed under the MIT License. See the LICENSE file for details.  
+
+---
+
+**Deploy SciCat effortlessly for tutorials and hackathons!** 🐳✨  
